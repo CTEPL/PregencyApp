@@ -2,8 +2,16 @@
     <string name="app_name">PregnencyApp</string>
     <string name="login">Login</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+    <string name="title_activity_navigation_drawer">DashBoard</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="username">UserName :</string>
+    <string name="password">Password :</string>
+    <string name="enter_username">Enter UserName</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="or">OR</string>
+    <string name="profile">Profile</string>p
+    <string name="logout">LogOut</string>
+
 </resources>

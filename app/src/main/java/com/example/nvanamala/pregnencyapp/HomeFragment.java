@@ -1,4 +1,4 @@
-package com.example.nvanamala.pregencyapp;
+package com.example.nvanamala.pregnencyapp;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

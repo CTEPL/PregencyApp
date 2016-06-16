@@ -1,10 +1,9 @@
-package com.example.nvanamala.pregencyapp;
+package com.example.nvanamala.pregnencyapp;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
 
 /**
  * This class used to display splash screen to the user
@@ -22,7 +21,16 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
 
     @Override
     public void run() {
-        Intent intent = new Intent(this,NavigationDrawerActivity.class);
-        startActivity(intent);
+        if(Utils.getBooleanFromSP(this,"LoggedIn")){
+            Intent intent = new Intent(this,NavigationDrawerActivity.class);
+            startActivity(intent);
+            finish();
+        }else{
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+
     }
 }

@@ -3,33 +3,40 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/item_appointment_tracker"
+            android:title="Appointment Tracker" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/item_belly_album"
+            android:title="BellyAlbum" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/item_checklist"
+            android:title="CheckList" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/item_food"
+            android:title="Diet/Food" />
+        <item
+            android:id="@+id/item_health_program"
+            android:title="Health Program" />
+        <item
+            android:id="@+id/item_map"
+            android:title="Map" />
+        <item
+            android:id="@+id/item_click_to_call"
+            android:title="Click To Call" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="More">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:id="@+id/item_share"
                 android:title="Share" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/item_forum"
+                android:title="Forum/Communication" />
+            <item
+                android:id="@+id/item_reward"
+                android:title="Referal/Reward" />
+
         </menu>
     </item>
 
