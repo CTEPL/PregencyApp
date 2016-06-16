@@ -1,10 +1,8 @@
 package com.example.nvanamala.pregnencyapp;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +11,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.nvanamala.fragments.AppointmentTracker;
+import com.example.nvanamala.fragments.BellyAlbumFragment;
+import com.example.nvanamala.fragments.CheckListFragment;
+import com.example.nvanamala.fragments.ClickToCallFragment;
+import com.example.nvanamala.fragments.FoodFragment;
+import com.example.nvanamala.fragments.ForumFragment;
+import com.example.nvanamala.fragments.HealthProgramFragment;
+import com.example.nvanamala.fragments.MapsFragment;
+import com.example.nvanamala.fragments.RewardsFragment;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,7 +31,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation_drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -65,6 +72,12 @@ public class NavigationDrawerActivity extends AppCompatActivity
             return true;
         }
 
+        if (id == R.id.action_logout) {
+            Utils.saveBooleanInSP(this, "LoggedIn", false);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -76,18 +89,24 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
         if (id == R.id.item_appointment_tracker) {
             // Handle the camera action
-            replaceFragment(new HomeFragment());
-        }/* else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }*/
+            replaceFragment(new AppointmentTracker());
+        } else if (id == R.id.item_belly_album) {
+            replaceFragment(new BellyAlbumFragment());
+        } else if (id == R.id.item_food) {
+            replaceFragment(new FoodFragment());
+        } else if (id == R.id.item_checklist) {
+            replaceFragment(new CheckListFragment());
+        } else if (id == R.id.item_reward) {
+            replaceFragment(new RewardsFragment());
+        } else if (id == R.id.item_map) {
+            replaceFragment(new MapsFragment());
+        } else if (id == R.id.item_health_program) {
+            replaceFragment(new HealthProgramFragment());
+        } else if (id == R.id.item_click_to_call) {
+            replaceFragment(new ClickToCallFragment());
+        } else if (id == R.id.item_forum) {
+            replaceFragment(new ForumFragment());
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

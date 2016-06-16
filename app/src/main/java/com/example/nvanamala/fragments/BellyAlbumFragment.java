@@ -1,4 +1,4 @@
-package com.example.nvanamala.pregnencyapp;
+package com.example.nvanamala.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,11 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.nvanamala.pregnencyapp.R;
+
 /**
  * Created by nvanamala on 6/15/2016.
  */
 
-public class HomeFragment extends Fragment {
+public class BellyAlbumFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
