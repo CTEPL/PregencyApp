@@ -13,5 +13,25 @@
     <string name="or">OR</string>
     <string name="profile">Profile</string>p
     <string name="logout">LogOut</string>
+    <string name="map">Map</string>
+    <string name="checklist">CheckList</string>
+    <string name="share">Share</string>
+
+    <!-- Menu Titles-->
+    <string name="appointment_tracker">Appointment Tracker</string>
+    <string name="belly_album">Belly Album</string>
+    <string name="food">Diet/Food</string>
+    <string name="health_program">Health Program</string>
+    <string name="click_to_call">ClickToCall</string>
+    <string name="forum">Forum/Communication</string>
+    <string name="reward">Referal/Reward</string>
+    <string name="more">More</string>
+
+
+
+
+
+
+
 
 </resources>

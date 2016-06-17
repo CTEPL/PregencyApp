@@ -73,8 +73,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         if (result.isSuccess()) {
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
-            Toast.makeText(this, acct.getDisplayName(), Toast.LENGTH_LONG).show();
-
+            Utils.saveBooleanInSP(this, "LoggedIn", true);
+            Intent intent = new Intent(this, NavigationDrawerActivity.class);
+            startActivity(intent);
+            finish();
         } else {
             // Signed out, show unauthenticated UI.
             // updateUI(false);
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     public void onClick(View v) {
         if (performValidations()) {
-            Utils.saveBooleanInSP(this,"LoggedIn",true);
+            Utils.saveBooleanInSP(this, "LoggedIn", true);
             Intent intent = new Intent(this, NavigationDrawerActivity.class);
             startActivity(intent);
             finish();
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             mPassword.setError("Please Enter Password");
             mPassword.requestFocus();
             isValidationDone = false;
-        }  else {
+        } else {
             isValidationDone = true;
         }
         return isValidationDone;
